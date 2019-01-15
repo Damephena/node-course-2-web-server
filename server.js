@@ -46,11 +46,18 @@ app.get('/about', (req, res) => {
 	});
 });
 
-app.get('/bah', (req, res) =>{
-	res.send({
-		errorMessage: 'Unable to handle request'
+app.get('/project', (req, res) => {
+	res.render('project.hbs', {
+		pageTitle: 'Project page'
 	});
 });
+	
+	//A different but aged way to render on browser
+// app.get('/bad', (req, res) =>{
+// 	res.send({
+// 		errorMessage: 'Unable to handle request'
+// 	});
+// });
 
 app.listen(port, () => {
 	console.log(`Server is up on port ${port}`);
